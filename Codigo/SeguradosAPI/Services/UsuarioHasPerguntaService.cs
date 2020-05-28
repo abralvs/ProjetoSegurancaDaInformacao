@@ -74,7 +74,7 @@ namespace SeguradosAPI.Services
         {
             entity.IdUsuario = model.IdUsuario;
             entity.IdPergunta = model.IdPergunta;
-            entity.Acertou = model.Acertou;
+            entity.Acertou = Convert.ToByte(model.Acertou);
             return entity;
         }
     }

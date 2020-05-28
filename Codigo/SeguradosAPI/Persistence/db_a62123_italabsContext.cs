@@ -2,15 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace SeguradosAPI.Persistence
+namespace SeguradosAPI
 {
-    public partial class DBContext : DbContext
+    public partial class db_a62123_italabsContext : DbContext
     {
-        public DBContext()
+        public db_a62123_italabsContext()
         {
         }
 
-        public DBContext(DbContextOptions<DBContext> options)
+        public db_a62123_italabsContext(DbContextOptions<db_a62123_italabsContext> options)
             : base(options)
         {
         }

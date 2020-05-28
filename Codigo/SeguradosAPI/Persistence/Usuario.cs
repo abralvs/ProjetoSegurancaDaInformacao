@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SeguradosAPI.Persistence
+namespace SeguradosAPI
 {
     public partial class Usuario
     {
