@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity implements Comunicador {
                             if (code == 200) {
 
                                 usuarioViewModel = response.body();
-                                //Toast.makeText(getBaseContext(), "TOKEN: " + usuarioViewModel.getToken(),Toast.LENGTH_LONG).show();
+                                Toast.makeText(getBaseContext(), "TOKEN: " + usuarioViewModel.getToken(),Toast.LENGTH_LONG).show();
 
                                 realm = Realm.getDefaultInstance();
                                 realm.beginTransaction();
@@ -198,7 +198,7 @@ public class LoginActivity extends AppCompatActivity implements Comunicador {
 
                 } else {
 
-                    //Toast.makeText(LoginActivity.this,"Falhou " + code,Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this,"Falhou " + code,Toast.LENGTH_LONG).show();
                     //System.out.println(response.errorBody());
 
                     if (dialog.isShowing())
@@ -252,7 +252,7 @@ public class LoginActivity extends AppCompatActivity implements Comunicador {
 
                 } else {
 
-                    //Toast.makeText(LoginActivity.this, "Falhou " + code,Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, "Falhou " + code,Toast.LENGTH_LONG).show();
                     //System.out.println(response.errorBody());
 
                 }

@@ -56,13 +56,13 @@ public class SplashActivity extends AppCompatActivity {
                         int code = response.code();
 
                         if (code == 200) {
-                            //Toast.makeText(getBaseContext(), "requisicao deu certo",Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getBaseContext(), "requisicao deu certo",Toast.LENGTH_LONG).show();
 
                             startActivity(new Intent(SplashActivity.this, MainActivity.class));
                             finish();
 
                         } else if (code == 400 || code == 401 || code == 403) {
-                            //Toast.makeText(getBaseContext(), "Nao autorizado" + code,Toast.LENGTH_LONG).show();
+                           // Toast.makeText(getBaseContext(), "Nao autorizado" + code,Toast.LENGTH_LONG).show();
 
                             Util.removeUser();
                             startActivity(new Intent(SplashActivity.this, LoginActivity.class));
