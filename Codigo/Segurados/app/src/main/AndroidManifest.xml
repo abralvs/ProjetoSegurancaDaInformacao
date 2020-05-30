@@ -9,7 +9,7 @@
     <application
         android:name=".realm.SeguradosApp"
         android:allowBackup="true"
-        android:icon="@mipmap/icone_"
+        android:icon="@mipmap/icone"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"

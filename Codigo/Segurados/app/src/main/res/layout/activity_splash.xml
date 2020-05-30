@@ -17,7 +17,7 @@
             android:layout_gravity="center"
             android:layout_width="60pt"
             android:layout_height="60pt"
-            android:src="@mipmap/icone_" />
+            android:src="@mipmap/icone" />
 
         <TextView
             android:layout_width="match_parent"

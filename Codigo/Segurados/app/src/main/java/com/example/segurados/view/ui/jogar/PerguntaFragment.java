@@ -131,10 +131,12 @@ public class PerguntaFragment extends Fragment {
       opcoes.add(op);
       op = new Opcao(pergunta.getAlternativa2());
       opcoes.add(op);
-      op = new Opcao(pergunta.getAlternativa3());
-      opcoes.add(op);
-      op = new Opcao(pergunta.getAlternativa4());
-      opcoes.add(op);
+      /*
+        op = new Opcao(pergunta.getAlternativa3());
+        opcoes.add(op);
+        op = new Opcao(pergunta.getAlternativa4());
+        opcoes.add(op);
+       */
       // ---------------------------------------------------------------------
       //circle progress
 
