@@ -422,6 +422,9 @@ public class SpinningWheelView extends View implements WheelRotation.RotationLis
         }
 
         int itemSize = getItemSize();
+        if(itemSize == 1)
+            return (T) items.get(0);
+         
         float cx = circle.getCx();
 
         for (int i = 0; i < points.length; i++) {

@@ -45,7 +45,7 @@ namespace SeguradosAPI.Services
                        .Select(r => new UsuarioHasPerguntaModel
                        {
                            IdPergunta = r.IdPergunta,
-                           Acertou = r.Acertou,
+                           Acertou = Convert.ToInt32(r.Acertou),
                            IdUsuario = r.IdUsuario
                        }).Where(s => s.IdUsuario == idUsuario) .ToList();
 
@@ -55,7 +55,7 @@ namespace SeguradosAPI.Services
                 .Select(r => new UsuarioHasPerguntaModel
                 {
                     IdPergunta = r.IdPergunta,
-                    Acertou = r.Acertou,
+                    Acertou = Convert.ToInt32(r.Acertou),
                     IdUsuario = r.IdUsuario
                 }).ToList();
 

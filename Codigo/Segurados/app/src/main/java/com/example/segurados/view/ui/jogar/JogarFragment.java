@@ -184,7 +184,6 @@ public class JogarFragment extends Fragment implements SpinningWheelView.OnRotat
                 int code = response.code();
                 realm = Realm.getDefaultInstance();
                 tematicaList = response.body();
-
                 if(code == 200){
                     realm.beginTransaction();
                     for(Tematica t : tematicaList){

@@ -12,7 +12,7 @@ public class SeguradosApp extends Application {
         Realm.init(this);
 
         RealmConfiguration config = new RealmConfiguration.Builder()
-                .name("segurados.realm")
+                .name("letrados.realm")
                 .schemaVersion(1)
                 .build();
         Realm.setDefaultConfiguration(config);

@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity implements Comunicador {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Usuario user = new Usuario(0, "Igor Bruno", edtEmail.getText().toString(), "olamunod.pbg", edtSenha.getText().toString());
+                Usuario user = new Usuario(0, "IgorBruno", edtEmail.getText().toString(), "olamunod.pbg", edtSenha.getText().toString());
 
                 dialog = new ProgressDialog(LoginActivity.this);
                 dialog.setMessage("Fazendo login...");
@@ -139,7 +139,7 @@ public class LoginActivity extends AppCompatActivity implements Comunicador {
                             } else {
                                 msgErro.setText("Email ou Senha incorreto");
                                 msgErro.setVisibility(View.VISIBLE);
-                                //Toast.makeText(getBaseContext(), "Falhou: " + code, Toast.LENGTH_LONG).show();
+                                Toast.makeText(getBaseContext(), "Falhou: " + code, Toast.LENGTH_LONG).show();
 
                                 if (dialog.isShowing())
                                     dialog.dismiss();
@@ -154,7 +154,7 @@ public class LoginActivity extends AppCompatActivity implements Comunicador {
                                 dialog.dismiss();
                             msgErro.setText("Algo inesperado aconteceu. Verifique sua conexao e tente novamente. ");
                             msgErro.setVisibility(View.VISIBLE);
-                            //Toast.makeText(getBaseContext(),t.getMessage(),Toast.LENGTH_LONG).show();
+                            Toast.makeText(getBaseContext(),t.getMessage(),Toast.LENGTH_LONG).show();
 
                         }
                     });
