@@ -1,0 +1,68 @@
+﻿
+@model LetradosWeb.Models.LoginModel;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <span class="icon brands fa-github"></span>
+    </div>
+    <div class="content">
+        <div class="inner">
+            <h3 class="major">Login Letrados</h3>
+            <form asp-action="Logar" asp-controller="Login">
+                <div class="fields">
+                    <div class="field half">
+                        <label for="usuario">Usuário</label>
+                        <input asp-for="Usuario" type="text" name="Usuario" id="usuario" value="" placeholder="usuario" />
+                    </div>
+                    <div class="field half">
+                        <label for="senha">Senha</label>
+                        <input asp-for="Senha" type="password" name="Senha" id="senha" value="" placeholder="********" />
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Entrar" class="primary" /></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</header>
+
+@section Scripts  {
+    <script>
+        $(document).ready(function () {
+
+            /* DIVS DE ERRO */
+            if (window.location.href.includes("msg")) {
+                let div = document.getElementById("note");
+                var alertHTML =
+                    ('<i class=\"start-icon fa fa-info-circle faa-shake animated\"></i>' +
+                        '<strong class=\"font__weight-semibold\">');
+
+                div.className = "alert fade alert-simple alert-primary text-left font__family-montserrat font__size-16 font__weight-light brk-library-rendered rendered show";
+
+                if (window.location.href.includes("msg=error")) {
+                    alertHTML +=
+                        ("Credenciais incorretas!");
+                }
+                else if (window.location.href.includes("msg=denied")) {
+                    alertHTML +=
+                        ("Acesso negado!");
+                }
+                alertHTML += ('</strong>');
+
+                 $("#note").append($(alertHTML));
+                 $("#note").fadeTo(4000, 500).slideUp(500, function () {
+                     $("#note").slideUp(500);
+                     window.history.replaceState({}, document.title, '@Url.Action("Index", "Login", null, Context.Request.Scheme)');
+                 });
+            }
+        });
+
+    </script>
+}

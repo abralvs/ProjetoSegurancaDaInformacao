@@ -139,8 +139,8 @@ public class CadastrarseFragment extends Fragment {
                             });
                     } else {
                         escondeDialog();
-                        if (senha1.length() < 8)
-                            mostraMensagem("A senha deve possuir pelo menos 8 caracteres");
+                        if (senha1.length() < 4)
+                            mostraMensagem("A senha deve possuir pelo menos 4 caracteres");
                         else
                             mostraMensagem("As senhas não correspondem");
                     }

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>@ViewData["Title"] - LetradosWeb</title>
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/tables.css">
+    <noscript><link rel="stylesheet" href="~/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <div id="note" role="alert" data-brk-library="component__alert"></div>
+        <div class="container body-content">
+            @RenderBody()
+            <footer id="footer">
+                <p class="copyright">&copy; @DateTime.Now.Year - LetradosWeb</p>
+            </footer>
+        </div>
+    </div>
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
